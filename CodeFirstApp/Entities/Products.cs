@@ -12,7 +12,7 @@ namespace CodeFirstApp.Entities
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; }
-        public uint UnitsInStock { get; set; }
+        public Int16 UnitsInStock { get; set; }
         public int CategoryID { get; set; }
         public int SupplierID { get; set; }
     }
