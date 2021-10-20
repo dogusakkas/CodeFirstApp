@@ -24,7 +24,7 @@
             <tr id="itemPlaceHolder" runat="server">
                 <td><%# Eval("CompanyName") %></td>
                 <td><%# Eval("ContactName") %></td>
-                <td><a href='Details.aspx?id=<%# Eval("SupplierID") %>' class="btn btn-primary">Details</a></td>
+                <td><a href='Supplier/<%# CodeFirstApp.Helper.HelperMethod.KarekterDuzelt( Eval("CompanyName").ToString()) %>/?id=<%# Eval("SupplierID") %>' class="btn btn-primary">Details</a></td>
             </tr>
         </ItemTemplate>
     </asp:ListView>

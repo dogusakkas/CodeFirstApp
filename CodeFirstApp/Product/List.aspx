@@ -13,7 +13,7 @@
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
                     <h4><%# Eval("UnitPrice") %></h4>
-                    <span class="text-muted"> <a href="Details.aspx?ID=<%# Eval("ProductID") %>"><%# Eval("ProductName") %></a></span>
+                    <span class="text-muted"> <a href="/Product/<%# CodeFirstApp.Helper.HelperMethod.KarekterDuzelt( Eval("ProductName").ToString()) %>/?id=<%# Eval("ProductID") %>"><%# Eval("ProductName") %></a></span>
                 </div>
             </ItemTemplate>
         </asp:ListView>

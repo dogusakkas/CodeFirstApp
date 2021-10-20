@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../Home.aspx">Northwind</a>
+                    <a class="navbar-brand" href="../Home">Northwind</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -56,16 +56,16 @@
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
 
-                        <li class="active"><a href="/Home.aspx">Home</a></li>
-                        <li><a href="/Product/List.aspx">Products</a></li>
-                        <li><a href="/Supplier/List.aspx">Suppliers</a></li>
+                        <li class="active"><a href="/Home">Home</a></li>
+                        <li><a href="/Products">Products</a></li>
+                        <li><a href="/Suppliers">Suppliers</a></li>
                     </ul>
                     <asp:Repeater ID="RepeaterCategory" runat="server">
                         <HeaderTemplate>
                             <ul class="nav nav-sidebar">
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <li><a href='/Product/List.aspx?categoryID=<%# Eval("CategoryID") %>'><%# Eval("CategoryName") %></a></li>
+                            <li><a href='/Products/<%# CodeFirstApp.Helper.HelperMethod.KarekterDuzelt( Eval("CategoryName").ToString()) %>/?id=<%# Eval("CategoryID") %>'><%# Eval("CategoryName") %></a></li>
                         </ItemTemplate>
                         <FooterTemplate>
                             </ul>
