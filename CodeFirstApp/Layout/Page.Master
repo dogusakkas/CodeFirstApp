@@ -15,7 +15,7 @@
 
     <%-- CSS --%>
     <link href="<%# ResolveUrl("~/bootstrap-3.2.0-dist/css/bootstrap.min.css") %> " rel="stylesheet" type="text/css" />
-    <link href="../bootstrap-3.2.0-dist/css/dashbord.css" rel="stylesheet" />
+    <link href="<%# ResolveUrl("../bootstrap-3.2.0-dist/css/dashbord.css") %> " rel="stylesheet" type="text/css" />
 
     <%-- JAVASCRIPT --%>
     <script src="<%# ResolveUrl("~/bootstrap-3.2.0-dist/js/bootstrap.min.js") %> " type="text/javascript"></script>
