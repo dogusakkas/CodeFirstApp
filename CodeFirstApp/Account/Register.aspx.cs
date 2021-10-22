@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CodeFirstApp.Contexts;
+using CodeFirstApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -39,7 +41,6 @@ namespace CodeFirstApp.Account
                 case MembershipCreateStatus.InvalidEmail:
                     break;
                 case MembershipCreateStatus.InvalidPassword:
-                    ErrorMesage.Text = "Hatalı şifre";
                     break;
                 case MembershipCreateStatus.InvalidProviderUserKey:
                     break;
@@ -51,12 +52,28 @@ namespace CodeFirstApp.Account
                     break;
                 case MembershipCreateStatus.Success:
                     ErrorMesage.Text = "Üyelik Oluşturuldu";
+                    CreateUserData(user.ProviderUserKey.ToString());
+                    Response.Redirect("/Home.aspx");
                     break;
                 case MembershipCreateStatus.UserRejected:
                     break;
                 default:
                     break;
             }
+        }
+
+        private void CreateUserData(string v)
+        {
+            Users entity = new Users();
+            entity.UserId = Guid.Parse(v);
+            entity.FullName = FullName.Text.Trim();
+
+            using (NorthwindContext db = new NorthwindContext())
+            {
+                db.Users.Add(entity);
+                db.SaveChanges();
+            }
+
         }
     }
 }

@@ -39,10 +39,24 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/User/Register.aspx">Register</a></li>
-                        <li><a href="/User/Login.aspx">Log in</a></li>
-                        <li><a href="/User/Profile.aspx">Profile</a></li>
+
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                <li><a href="Register">Register</a></li>
+                                <li><a href="Login">Log in</a></li>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+
+
+                                <li><a href="Manage"><%:UserName %></a></li>
+
+                                <li><a href="Manage">Profile</a></li>
+                                <li><a href="Logout">Log out</a></li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
                         <li><a href="/User/ContactUs.aspx">Contact Us</a></li>
+
                     </ul>
                     <div class="navbar-form navbar-right">
                         <input type="text" class="form-control" placeholder="Search...">

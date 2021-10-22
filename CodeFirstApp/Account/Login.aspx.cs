@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,7 +12,35 @@ namespace CodeFirstApp.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.IsAuthenticated)
+            {
+                Response.Redirect("/Home");
+            }
+        }
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            string email = Email.Text.Trim();
+            string password = Password.Text.Trim();
 
+            if (string.IsNullOrEmpty(email))
+            {
+                ErrorMesage.Text = "Email cannot be empty";
+                return;
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                ErrorMesage.Text = "Password cannot be empty";
+                return;
+            }
+
+            if (Membership.ValidateUser(email, password))
+            {
+                FormsAuthentication.RedirectFromLoginPage(email, true);
+            }
+            else
+            {
+                ErrorMesage.Text = "Email or password incorrect please try again";
+            }
         }
     }
 }

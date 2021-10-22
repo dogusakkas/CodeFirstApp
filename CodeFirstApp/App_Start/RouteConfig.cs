@@ -12,6 +12,10 @@ namespace CodeFirstApp.App_Start
         {
             // Home
             routes.MapPageRoute("HomeRoute","Home","~/Home.aspx");
+            routes.MapPageRoute("RegisterRoute","Register", "~/Account/Register.aspx");
+            routes.MapPageRoute("LoginRoute","Login", "~/Account/Login.aspx");
+            routes.MapPageRoute("ProfileRoute","Profile", "~/Account/Manage.aspx");
+            routes.MapPageRoute("LogoutRoute","Logout", "~/Account/Logout.aspx");
             // Product
             routes.MapPageRoute("ProductsRoute","Products","~/Product/List.aspx");
             routes.MapPageRoute("ProductRoute", "Product/{ProductName}", "~/Product/Details.aspx");
