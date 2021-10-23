@@ -24,12 +24,12 @@ namespace CodeFirstApp.Account
 
             if (string.IsNullOrEmpty(email))
             {
-                ErrorMesage.Text = "Email cannot be empty";
+                ErrorMessage.Text = "Email cannot be empty";
                 return;
             }
             if (string.IsNullOrEmpty(password))
             {
-                ErrorMesage.Text = "Password cannot be empty";
+                ErrorMessage.Text = "Password cannot be empty";
                 return;
             }
 
@@ -39,7 +39,7 @@ namespace CodeFirstApp.Account
             }
             else
             {
-                ErrorMesage.Text = "Email or password incorrect please try again";
+                ErrorMessage.Text = "Email or password incorrect please try again";
             }
         }
     }
