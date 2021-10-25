@@ -79,6 +79,8 @@
     <Content Include="Account\Logout.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\Account\Role\Add.aspx" />
+    <Content Include="Admin\Account\Role\List.aspx" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.css" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap.css" />
@@ -138,6 +140,20 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Account\Role\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Account\Role\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Account\Role\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Account\Role\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contexts\NorthwindContext.cs" />
     <Compile Include="Entities\Categories.cs" />
@@ -154,6 +170,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="Layout\Page.Master.cs">
       <DependentUpon>Page.Master</DependentUpon>
@@ -236,6 +259,7 @@
     <Content Include="Layout\Page.Master" />
     <Content Include="bootstrap-3.2.0-dist\js\doc.mic.js" />
     <Content Include="Layout\User.Master" />
+    <Content Include="Layout\Admin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -245,7 +269,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
