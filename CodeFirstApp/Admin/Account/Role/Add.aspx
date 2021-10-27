@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-    <h2 class="sub-header">Role</h2>
+        <h2 class="sub-header">Role</h2>
     <div class="form-group">
         <label for="NewRole">Role Name</label>
         <asp:TextBox ID="NewRole" runat="server" CssClass="form-control" placeholder="Role Name"></asp:TextBox>
@@ -12,5 +12,6 @@
     </div>
     <asp:Button ID="BtnSave" runat="server" Text="Submit" CssClass="btn btn-default" OnClick="AddRole" />
     <asp:Label ID="ErrorMessage" runat="server" CssClass="text-danger"></asp:Label>
+
 
 </asp:Content>

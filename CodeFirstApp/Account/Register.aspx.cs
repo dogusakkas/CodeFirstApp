@@ -53,12 +53,21 @@ namespace CodeFirstApp.Account
                 case MembershipCreateStatus.Success:
                     ErrorMesage.Text = "Üyelik Oluşturuldu";
                     CreateUserData(user.ProviderUserKey.ToString());
+                    SetRole(user.UserName);
                     Response.Redirect("/Home.aspx");
                     break;
                 case MembershipCreateStatus.UserRejected:
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void SetRole(string p)
+        {
+            if (Roles.IsUserInRole(p, "User") == false)
+            {
+                Roles.AddUserToRole(p, "User");
             }
         }
 

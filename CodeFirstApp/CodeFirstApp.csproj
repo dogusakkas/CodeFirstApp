@@ -81,6 +81,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Admin\Account\Role\Add.aspx" />
     <Content Include="Admin\Account\Role\List.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.css" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap.css" />
@@ -89,6 +90,7 @@
     <Content Include="bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="bootstrap-3.2.0-dist\js\bootstrap.js" />
     <Content Include="bootstrap-3.2.0-dist\js\bootstrap.min.js" />
+    <Content Include="Error\Unauthorize.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Product\Details.aspx" />
@@ -154,12 +156,26 @@
     <Compile Include="Admin\Account\Role\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contexts\NorthwindContext.cs" />
     <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\Products.cs" />
     <Compile Include="Entities\Suppliers.cs" />
     <Compile Include="Entities\Users.cs" />
+    <Compile Include="Error\Unauthorize.aspx.cs">
+      <DependentUpon>Unauthorize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\Unauthorize.aspx.designer.cs">
+      <DependentUpon>Unauthorize.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,6 +276,8 @@
     <Content Include="bootstrap-3.2.0-dist\js\doc.mic.js" />
     <Content Include="Layout\User.Master" />
     <Content Include="Layout\Admin.Master" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Account\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -17,6 +17,8 @@ namespace CodeFirstApp.App_Start
             routes.MapPageRoute("ProfileRoute","Profile", "~/Account/Manage.aspx");
             routes.MapPageRoute("LogoutRoute","Logout", "~/Account/Logout.aspx");
             routes.MapPageRoute("ChangePasswordRoute","ChangePassword", "~/Account/ChangePassword.aspx");
+            // Account
+            routes.MapPageRoute("UnauthorizeRoute", "Unauthorize", "~/Error/Unauthorize.aspx");
             // Product
             routes.MapPageRoute("ProductsRoute","Products","~/Product/List.aspx");
             routes.MapPageRoute("ProductRoute", "Product/{ProductName}", "~/Product/Details.aspx");

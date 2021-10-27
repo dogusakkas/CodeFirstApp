@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <title>Northwind Application</title>
 
-    <%--<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>--%>
+    
 
     <%-- CSS --%>
     <link href="<%# ResolveUrl("~/bootstrap-3.2.0-dist/css/bootstrap.min.css") %> " rel="stylesheet" type="text/css" />

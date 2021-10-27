@@ -12,6 +12,11 @@ namespace CodeFirstApp.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.IsAuthenticated && !string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
+            {
+                Response.Redirect("/Unauthorize");
+            }
+
             if (Request.IsAuthenticated)
             {
                 Response.Redirect("/Home");
