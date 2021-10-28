@@ -4,7 +4,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-
+    <p class="form-group">
+        <asp:Literal ID="ErrorMessage" runat="server"></asp:Literal>
+    </p>
     <form>
         <div class="form-group">
             <label for="FullName">Full Name</label>
@@ -36,7 +38,7 @@
         <asp:Button ID="BtnRegister" runat="server" Text="Sign Up" CssClass="btn btn-primary" OnClick="BtnRegister_Click" />
 
 
-        <asp:TextBox ID="ErrorMesage" runat="server" type="text" class="form-control" aria-describedby="emailHelp" placeholder="test"></asp:TextBox>
+        
     </form>
 
 </asp:Content>

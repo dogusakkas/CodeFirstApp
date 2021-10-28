@@ -48,8 +48,8 @@
                             </AnonymousTemplate>
 
                             <LoggedInTemplate>
-                                <li><a href="Profile"><%:UserName %></a></li>
-                                <li><a href="Profile">Profile</a></li>
+                                <li><a href="Manage"><%:UserName %></a></li>
+                                <li><a href="Manage">Profile</a></li>
                                 <li><a href="ChangePassword">Change</a></li>
                                 <li><a href="Logout">Log out</a></li>
                             </LoggedInTemplate>
@@ -75,6 +75,11 @@
                         <li><a href="/Products">Products</a></li>
                         <li><a href="/Suppliers">Suppliers</a></li>
                     </ul>
+
+                    <asp:ContentPlaceHolder ID="ManageContentPlaceHolder" runat="server">
+
+                    </asp:ContentPlaceHolder>
+
                     <asp:Repeater ID="RepeaterCategory" runat="server">
                         <HeaderTemplate>
                             <ul class="nav nav-sidebar">

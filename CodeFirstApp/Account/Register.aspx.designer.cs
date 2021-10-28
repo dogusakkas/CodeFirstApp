@@ -15,6 +15,15 @@ namespace CodeFirstApp.Account
     {
 
         /// <summary>
+        /// ErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
+
+        /// <summary>
         /// FullName control.
         /// </summary>
         /// <remarks>
@@ -94,14 +103,5 @@ namespace CodeFirstApp.Account
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnRegister;
-
-        /// <summary>
-        /// ErrorMesage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ErrorMesage;
     }
 }

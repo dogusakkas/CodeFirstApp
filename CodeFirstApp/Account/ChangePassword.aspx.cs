@@ -26,17 +26,17 @@ namespace CodeFirstApp.Account
 
             if (string.IsNullOrEmpty(current))
             {
-                ErrorMesage.Text = "Enter your current password";
+                ErrorMessage.Text = "Enter your current password";
                 return;
             }
             if (string.IsNullOrEmpty(newpassword))
             {
-                ErrorMesage.Text = "Enter your new password";
+                ErrorMessage.Text = "Enter your new password";
                 return;
             }
             if (string.IsNullOrEmpty(confirmnew))
             {
-                ErrorMesage.Text = "Re-enter your new password";
+                ErrorMessage.Text = "Re-enter your new password";
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace CodeFirstApp.Account
             if (user != null)
             {
                 user.ChangePassword(current,newpassword);
-                ErrorMesage.Text = "Your password has been changed";
+                ErrorMessage.Text = "Your password has been changed";
             }
         }
     }

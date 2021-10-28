@@ -24,10 +24,26 @@ namespace CodeFirstApp.Layout
         {
             if (Request.IsAuthenticated)
             {
-                MembershipUser MembershipUser = LoadMembershipData();
-                Users customUser =  LoadUserData(MembershipUser.ProviderUserKey.ToString());
+                UserIdentity identity = new UserIdentity();
 
-                UserName = customUser.FullName;
+                if (Session["Useridentity"] == null)
+                {
+                    MembershipUser MembershipUser = LoadMembershipData();
+                    Users customUser = LoadUserData(MembershipUser.ProviderUserKey.ToString());
+
+                    identity.UserID = Guid.Parse(MembershipUser.ProviderUserKey.ToString());
+                    identity.Email = MembershipUser.Email;
+                    identity.FullName = customUser.FullName;
+
+                    Session["Useridentity"] = identity;
+
+                }
+                else
+                {
+                    identity = (UserIdentity)Session["Useridentity"];
+                }
+
+                UserName = identity.FullName;
             }
         }
 
@@ -39,8 +55,8 @@ namespace CodeFirstApp.Layout
             using (NorthwindContext db = new NorthwindContext())
             {
                 entity = (from x in db.Users
-                                where x.UserId == userIdd
-                                select x).FirstOrDefault<Users>();
+                          where x.UserId == userIdd
+                          select x).FirstOrDefault<Users>();
             }
             return entity;
         }
@@ -50,7 +66,7 @@ namespace CodeFirstApp.Layout
             return Membership.GetUser();
         }
 
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

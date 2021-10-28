@@ -23,7 +23,6 @@
     </div>
 
      <asp:Button ID="BtnRegister" runat="server" Text="Log In" CssClass="btn btn-primary" OnClick="BtnLogin_Click" />
-    <br />
-    <asp:TextBox ID="ErrorMesage" runat="server" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Error is Coming"></asp:TextBox>
+   
 
 </asp:Content>

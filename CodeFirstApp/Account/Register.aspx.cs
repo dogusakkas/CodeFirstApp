@@ -51,10 +51,10 @@ namespace CodeFirstApp.Account
                 case MembershipCreateStatus.ProviderError:
                     break;
                 case MembershipCreateStatus.Success:
-                    ErrorMesage.Text = "Üyelik Oluşturuldu";
+                    ErrorMessage.Text = "Üyelik Oluşturuldu";
                     CreateUserData(user.ProviderUserKey.ToString());
                     SetRole(user.UserName);
-                    Response.Redirect("/Home.aspx");
+                    Response.Redirect("/Login.aspx");
                     break;
                 case MembershipCreateStatus.UserRejected:
                     break;

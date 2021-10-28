@@ -81,6 +81,10 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Admin\Account\Role\Add.aspx" />
     <Content Include="Admin\Account\Role\List.aspx" />
+    <Content Include="Admin\Category\Add.aspx" />
+    <Content Include="Admin\Category\Delete.aspx" />
+    <Content Include="Admin\Category\Details.aspx" />
+    <Content Include="Admin\Category\List.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.css" />
     <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.min.css" />
@@ -156,6 +160,34 @@
     <Compile Include="Admin\Account\Role\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Category\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +200,7 @@
     <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\Products.cs" />
     <Compile Include="Entities\Suppliers.cs" />
+    <Compile Include="Entities\UserIdentity.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Error\Unauthorize.aspx.cs">
       <DependentUpon>Unauthorize.aspx</DependentUpon>
