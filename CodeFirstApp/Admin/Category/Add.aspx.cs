@@ -36,6 +36,7 @@ namespace CodeFirstApp.Admin.Category
 
                 ErrorMessage.Text = "The category has been successfully added.";
             }
+            
         }
     }
 }

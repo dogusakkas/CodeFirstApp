@@ -14,7 +14,13 @@ namespace CodeFirstApp.Admin.Category
         {
             using (NorthwindContext db = new NorthwindContext())
             {
-                CategoryList.DataSource = db.Categories.ToList();
+                CategoryList.DataSource = (from x in db.Categories
+                                           select new
+                                           {
+                                               x.CategoryID,
+                                               x.CategoryName,
+                                               ProductCount = x.Products.Count
+                                           }).ToList();
                 CategoryList.DataBind();
             }
         }

@@ -86,14 +86,14 @@
     <Content Include="Admin\Category\Details.aspx" />
     <Content Include="Admin\Category\List.aspx" />
     <Content Include="Admin\Default.aspx" />
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.css" />
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.min.css" />
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap.css" />
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap.min.css" />
-    <Content Include="bootstrap-3.2.0-dist\css\dashbord.css" />
-    <Content Include="bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="bootstrap-3.2.0-dist\js\bootstrap.js" />
-    <Content Include="bootstrap-3.2.0-dist\js\bootstrap.min.js" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap-theme.css" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap.css" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap.min.css" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\dashbord.css" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\js\bootstrap.js" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\js\bootstrap.min.js" />
     <Content Include="Error\Unauthorize.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -300,13 +300,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap-theme.css.map" />
-    <Content Include="bootstrap-3.2.0-dist\css\bootstrap.css.map" />
-    <Content Include="bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\css\bootstrap.css.map" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Layout\Page.Master" />
-    <Content Include="bootstrap-3.2.0-dist\js\doc.mic.js" />
+    <Content Include="Layout\bootstrap-3.2.0-dist\js\doc.mic.js" />
     <Content Include="Layout\User.Master" />
     <Content Include="Layout\Admin.Master" />
     <Content Include="Admin\Web.config" />

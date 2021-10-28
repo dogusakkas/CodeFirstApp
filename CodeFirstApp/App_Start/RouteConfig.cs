@@ -13,14 +13,18 @@ namespace CodeFirstApp.App_Start
             // Home
             routes.MapPageRoute("HomeRoute","Home","~/Home.aspx");
             routes.MapPageRoute("DefaultRoute","Default","~/Default.aspx");
-            routes.MapPageRoute("RegisterRoute","Register", "~/Account/Register.aspx");
-            routes.MapPageRoute("LoginRoute","Login", "~/Account/Login.aspx");
-            routes.MapPageRoute("ManageRoute","Manage", "~/Account/Manage.aspx");
-            routes.MapPageRoute("LogoutRoute","Logout", "~/Account/Logout.aspx");
-            routes.MapPageRoute("ChangePasswordRoute","ChangePassword", "~/Account/ChangePassword.aspx");
-            routes.MapPageRoute("AddCategoryRoute","AddCategory", "~/Admin/Category/Add.aspx");
+            // Admin/Category
+            routes.MapPageRoute("AddCategoryRoute", "AddCategory", "~/Admin/Category/Add.aspx");
             routes.MapPageRoute("DetailsCategoryRoute","DetailsCategory", "~/Admin/Category/Details.aspx");
+            routes.MapPageRoute("ListCategoryRoute","ListCategory", "~/Admin/Category/List.aspx");
+            routes.MapPageRoute("DeleteCategoryRoute","DeleteCategory", "~/Admin/Category/Delete.aspx");
             // Account
+            routes.MapPageRoute("ChangePasswordRoute", "ChangePassword", "~/Account/ChangePassword.aspx");
+            routes.MapPageRoute("RegisterRoute", "Register", "~/Account/Register.aspx");
+            routes.MapPageRoute("LoginRoute", "Login", "~/Account/Login.aspx");
+            routes.MapPageRoute("ManageRoute", "Manage", "~/Account/Manage.aspx");
+            routes.MapPageRoute("LogoutRoute", "Logout", "~/Account/Logout.aspx");
+            // Error
             routes.MapPageRoute("UnauthorizeRoute", "Unauthorize", "~/Error/Unauthorize.aspx");
             // Product
             routes.MapPageRoute("ProductsRoute","Products","~/Product/List.aspx");
